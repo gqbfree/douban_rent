@@ -1,0 +1,4 @@
+2014-11-26 13:54:55+0800 [scrapy] INFO: Scrapy 0.14.3 started (bot: douban_rent)
+2014-11-26 13:54:55+0800 [scrapy] DEBUG: Enabled extensions: LogStats, TelnetConsole, CloseSpider, WebService, CoreStats, MemoryUsage, SpiderState
+2014-11-26 13:58:13+0800 [scrapy] INFO: Scrapy 0.14.3 started (bot: douban_rent)
+2014-11-26 13:58:13+0800 [scrapy] DEBUG: Enabled extensions: LogStats, TelnetConsole, CloseSpider, WebService, CoreStats, MemoryUsage, SpiderState
