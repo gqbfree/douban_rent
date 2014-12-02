@@ -23,8 +23,8 @@ class doubanRentSpider(CrawlSpider):
         item = DoubanRentItem() 
         html_parser = HTMLParser.HTMLParser()
 
-        item['title'] = sel.xpath('//*[@id="content"]/h1/text()').extract()
+        item['title'] = "".join(sel.xpath('//*[@id="content"]/h1/text()').extract())
         item['link']  = response.url
-        item['desc']  = sel.xpath('//*[@id="link-report"]/div/p/text()').extract()
+        item['desc']  = "".join(sel.xpath('//*[@id="link-report"]/div/p/text()').extract())
 
         return item
