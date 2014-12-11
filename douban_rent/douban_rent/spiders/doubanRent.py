@@ -5,9 +5,12 @@ from scrapy.selector import Selector
 from scrapy.contrib.spiders import CrawlSpider, Rule
 from scrapy.contrib.linkextractors.sgml import SgmlLinkExtractor
 import HTMLParser
+import redis
 
 from douban_rent.items import DoubanRentItem
 
+r = redis.StrictRedis(host='localhost', port='6379', db=0)
+r.set('url_count', 0)
 
 class doubanRentSpider(CrawlSpider):
     name = "douban_rent"
@@ -27,4 +30,5 @@ class doubanRentSpider(CrawlSpider):
         item['link']  = response.url
         item['desc']  = "".join(sel.xpath('//*[@id="link-report"]/div/p/text()').extract())
 
+        self.state['url_count'] = self.state.get('url_count', 0) + 1
         return item

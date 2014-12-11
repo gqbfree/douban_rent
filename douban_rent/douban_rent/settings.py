@@ -27,3 +27,7 @@ MONGODB_SERVER = 'localhost'
 MONGODB_PORT   = 27017
 MONGODB_DB     = 'python'
 MONGODB_COLLECTION = 'test'
+
+
+REDIS_HOST = 'localhost'
+REDIS_PORT = 6379
